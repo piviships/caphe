@@ -4,7 +4,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center min-h-screen p-8">
         <div className="text-center space-y-8">
           <h1 className="text-8xl font-bold tracking-tight text-primary">
-            CA PHÈ
+            CA PHE
           </h1>
           <p className="text-xl text-muted-foreground max-w-md">
             Experience the perfect blend of tradition and innovation
