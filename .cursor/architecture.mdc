@@ -3,3 +3,105 @@ description:
 globs:
 alwaysApply: false
 ---
+# Caphe Architecture Rules
+
+This document outlines the architectural rules and conventions for the Caphe project.
+
+## Core Technologies
+
+- **Next.js 15.3.1**: Used as the main framework
+- **React 19**: For UI components
+- **TypeScript**: For type safety
+- **TailwindCSS 4**: For styling
+- **shadcn/ui**: For UI components
+- **Prisma**: For database operations
+
+## Project Structure
+
+### Directory Organization
+
+- `/app`: Next.js app directory (App Router)
+- `/components`: Reusable React components
+  - `/ui`: shadcn/ui components
+- `/lib`: Utility functions and shared code
+- `/hooks`: Custom React hooks
+- `/prisma`: Database schema and migrations
+
+### File Naming Conventions
+
+- React components: PascalCase (e.g., `Button.tsx`)
+- Utility functions: camelCase (e.g., `utils.ts`)
+- Page components: lowercase with hyphens (e.g., `page.tsx`)
+
+## Styling Rules
+
+### TailwindCSS
+
+- Use TailwindCSS for all styling
+- Custom theme variables are defined in `globals.css`
+- Use the `cn` utility function from `lib/utils.ts` for conditional class merging
+- Follow the shadcn/ui theming system
+
+### Fonts
+
+- Primary font: Geist Sans
+- Monospace font: Geist Mono
+- Font variables are available through CSS variables
+
+## Component Architecture
+
+### shadcn/ui Integration
+
+- Use shadcn/ui components as the base for UI elements
+- Extend shadcn/ui components when needed
+- Maintain consistent styling through the theme system
+
+### Component Organization
+
+- Components should be atomic and reusable
+- Props should be properly typed with TypeScript
+- Use composition over inheritance
+
+## Database Rules
+
+### Prisma
+
+- Define all models in the Prisma schema
+- Use migrations for database changes
+- Follow Prisma best practices for relations and indexes
+
+## Code Quality
+
+### TypeScript
+
+- Enable strict mode
+- Use proper type definitions
+- Avoid `any` type
+- Use interfaces for object types
+
+### ESLint
+
+- Follow Next.js core web vitals rules
+- Use TypeScript-specific rules
+- Maintain consistent code style
+
+## Performance
+
+- Use Next.js App Router features for optimization
+- Implement proper code splitting
+- Optimize images and assets
+- Use server components where appropriate
+
+## Security
+
+- Keep dependencies updated
+- Follow Next.js security best practices
+- Use environment variables for sensitive data
+- Implement proper authentication and authorization
+
+## Development Workflow
+
+- Use the development server with Turbopack (`npm run dev`)
+- Follow Git workflow for version control
+- Maintain proper documentation
+- Keep the project structure clean and organized
